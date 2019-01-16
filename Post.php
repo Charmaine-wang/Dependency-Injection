@@ -1,14 +1,22 @@
-<?php declare(strict_type=1);
+<?php declare(strict_types=1);
 
 class Post{
 
 protected $title;
 
-public function __construct(Author $title){
+public function __construct(string $title, Author $author)
+{
   $this->title = $title;
 }
 
-  public function getPost(): string{
+  // public function getTitle(Author $author): void
+  // {
+  //   $this->title->add($author);
+  // }
 
-  }
+
+public function getTitle(): string
+{
+    return $this->title;
+}
 }
